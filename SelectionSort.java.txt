@@ -1,0 +1,27 @@
+import java.util.*;
+ class SelectionSort {
+     public static void main (String[] args)
+     {
+    	 int a  [] = { 38 , 52 , 9 , 8 , 64 , 23 } ;
+    	 int min , temp = 0 , j , i;
+    	 for (  i = 0 ; i < a.length ; i++)
+    	 {
+    		 min = i ;
+    		 for ( j = i+1 ;j < a.length ; j++)
+    		 {
+    			 if ( a[j] < a[min])
+    			 {
+    				 min = j ;
+    			 }
+    		 }
+    		temp = a [i] ; 
+    		a[i] = a[min] ;
+    		a[min] = temp ;
+    	 }
+    	 System.out.print("Sorted array: ") ;
+    	 for (int k = 0 ; k < a.length ; k++)
+    	 {
+    		 System.out.print( a[k] + " ") ;
+    	 }
+     }
+}
